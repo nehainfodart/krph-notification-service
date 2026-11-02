@@ -4,6 +4,7 @@ import { NotificationsController } from './notifications.controller';
 import { NotificationsService } from './notifications.service';
 import { SmsProviderService } from './sms-provider.service';
 import { WhatsAppProviderService } from './whatsapp-provider.service';
+import { KissanSmsProviderService } from './kissan-sms-provider.service';
 import { ServiceApiKeyGuard } from './guards/service-api-key.guard';
 
 @Module({
@@ -13,6 +14,7 @@ import { ServiceApiKeyGuard } from './guards/service-api-key.guard';
     NotificationsService,
     SmsProviderService,
     WhatsAppProviderService,
+    KissanSmsProviderService,
     ServiceApiKeyGuard,
   ],
 })

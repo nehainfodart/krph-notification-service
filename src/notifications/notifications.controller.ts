@@ -6,6 +6,7 @@ import {
 } from '@nestjs/common';
 import { NotificationsService } from './notifications.service';
 import { SendNotificationDto } from './dto/send-notification.dto';
+import { KissanHeaderNotificationDto } from './dto/kissanHeader-notification.dto';
 import { ServiceApiKeyGuard } from './guards/service-api-key.guard';
 
 @Controller('notifications')
@@ -23,5 +24,9 @@ export class NotificationsController {
   @Post('whatsapp')
   sendWhatsApp(@Body() dto: SendNotificationDto) {
     return this.notificationsService.sendWhatsApp(dto);
+  }
+   @Post('kissan')
+  sendKissanSMS(@Body() dto: KissanHeaderNotificationDto) {
+    return this.notificationsService.sendKissanSMS(dto);
   }
 }
